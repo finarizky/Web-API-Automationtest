@@ -10,17 +10,25 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    protected static WebDriver driver;
+    public static WebDriver driver;
 
     public static WebDriver getDriver() {
-        if (driver == null) {
+        ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--headless");
+        options.addArguments("window-size=1920,1080");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless");
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        }
         return driver;
+    }
+
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

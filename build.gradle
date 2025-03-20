@@ -22,7 +22,9 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-junit:7.14.0'
 
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2")
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
 
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
     testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.5.0'
