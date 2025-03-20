@@ -8,7 +8,7 @@ Feature: Login
     And User input username with "nanabi"
     And User input password with "123"
     And User click button login
-    Then User is on homepage
+    Then User is success login
 
   @login-wrong-password
   Scenario: User login with wrong password
