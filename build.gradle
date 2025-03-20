@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version "2.11.2"
+}
+
+allure {
+    version = '2.19.0'
+}
+
+group 'org.Finarizky'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2")
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
+    testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.5.0'
+
+    implementation group: 'org.json', name: 'json', version: '20250107'
+}
+
+test {
+    useJUnit()
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
+
+task CucumberWeb() {
+    description("Running Web Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/test-report.html',
+                    '--plugin', 'pretty',
+                    '--glue', 'com.finarizky',
+                    '--tags', "${tags}",
+                    'src/test/resources/web-demoblaze'
+            ]
+        }
+    }
+}
