@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class HomepageStepdef extends BaseTest {
 
     HomepagePage hompagepage;
-    private WebDriver driver;
+    private WebDriver driver = BaseTest.driver;
     LoginPage loginpage;
 
     String loggedInUsername;
@@ -28,7 +28,6 @@ public class HomepageStepdef extends BaseTest {
     @Given("User doing login with {string} and {string}")
     public void userDoingLoginWithAnd(String username, String password) {
 
-        driver = getDriver();
         loginpage = new LoginPage(driver);
         loginpage.goToLandingPage();
         loginpage.headerMenuLogin();
@@ -41,7 +40,6 @@ public class HomepageStepdef extends BaseTest {
     @When("User is on homepage")
     public void userIsOnHomepage() {
 
-        driver = getDriver();
         hompagepage = new HomepagePage(driver);
 
         String actualMessage = hompagepage.validateOnHomepage();
