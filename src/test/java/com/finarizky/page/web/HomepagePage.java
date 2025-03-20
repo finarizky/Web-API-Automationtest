@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomepagePage {
 
-    By verifUserLogin = By.id("nameofuser");
+    static By verifUserLogin = By.id("nameofuser");
     By btnSlide = By.xpath("//*[@id=\"carouselExampleIndicators\"]/a[2]/span[1]");
     By btnNext = By.xpath("//*[@id=\"next2\"]");
     By btnPrevious = By.xpath("//*[@id=\"prev2\"]");
