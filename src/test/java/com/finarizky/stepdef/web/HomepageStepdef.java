@@ -1,26 +1,24 @@
 package com.finarizky.stepdef.web;
 
-import com.finarizky.BaseTest;
+import com.finarizky.base.BaseWebTest;
 import com.finarizky.page.web.HomepagePage;
 import com.finarizky.page.web.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class HomepageStepdef extends BaseTest {
+public class HomepageStepdef extends BaseWebTest {
 
     HomepagePage hompagepage;
-    private WebDriver driver = BaseTest.driver;
+    WebDriver driver = BaseWebTest.driver;
+    Properties prop;
     LoginPage loginpage;
 
     String loggedInUsername;
@@ -28,8 +26,7 @@ public class HomepageStepdef extends BaseTest {
     @Given("User doing login with {string} and {string}")
     public void userDoingLoginWithAnd(String username, String password) {
 
-        loginpage = new LoginPage(driver);
-        loginpage.goToLandingPage();
+        loginpage = new LoginPage(driver, prop);
         loginpage.headerMenuLogin();
         loggedInUsername = username;
         loginpage.inputUsername(username);
@@ -40,7 +37,7 @@ public class HomepageStepdef extends BaseTest {
     @When("User is on homepage")
     public void userIsOnHomepage() {
 
-        hompagepage = new HomepagePage(driver);
+        hompagepage = new HomepagePage(driver, prop);
 
         String actualMessage = hompagepage.validateOnHomepage();
         String expectedMessage = "Welcome " + loggedInUsername;
@@ -82,7 +79,7 @@ public class HomepageStepdef extends BaseTest {
     @Then("User is on next page")
     public void userIsOnNextPage() {
 
-        hompagepage = new HomepagePage(driver);
+        hompagepage = new HomepagePage(driver, prop);
         hompagepage.validateNextPage();
     }
 
@@ -96,7 +93,7 @@ public class HomepageStepdef extends BaseTest {
     @Then("User is on previous page")
     public void userIsOnPreviousPage() {
 
-        hompagepage = new HomepagePage(driver);
+        hompagepage = new HomepagePage(driver, prop);
         hompagepage.validatePreviousPage();
     }
 

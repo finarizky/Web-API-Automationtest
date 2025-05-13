@@ -3,17 +3,17 @@ Feature: Cart
 
   @add-to-cart
   Scenario: User add to cart product
-    Given User doing login with "nanabi" and "1234"
+    Given User doing login with "nanabi" and "123"
     When User is on homepage
-    And User click product Nokia lumia 1520
+    And User click product Nokia lumia1520
     And User click button add to cart
     Then User able to see warning popup "Product added."
 
   @delete-cart
   Scenario: User delete cart product
-    Given User doing login with "nanabi" and "1234"
+    Given User doing login with "nanabi" and "123"
     When User is on homepage
-    And User click product Iphone 6 32gb
+    And User click product Iphone632gb
     And User click button add to cart
     And User click button ok
     And User click menu cart
@@ -22,9 +22,9 @@ Feature: Cart
 
   @checkout
   Scenario: User checkout product
-    Given User doing login with "nanabi" and "1234"
+    Given User doing login with "nanabi" and "123"
     When User is on homepage
-    And User click product HTC One M9
+    And User click product HTC OneM9
     And User click button add to cart
     And User click button ok
     And User click menu cart
@@ -40,9 +40,9 @@ Feature: Cart
 
   @cancel-checkout
   Scenario: User cancel checkout
-    Given User doing login with "nanabi" and "1234"
+    Given User doing login with "nanabi" and "123"
     When User is on homepage
-    And User click product HTC One M9
+    And User click product HTC OneM9
     And User click button add to cart
     And User click button ok
     And User click menu cart
@@ -52,12 +52,15 @@ Feature: Cart
 
   @empty-data-checkout
   Scenario: User Checkout with empty data order
-    Given User doing login with "nanabi" and "1234"
+    Given User doing login with "nanabi" and "123"
     When User is on homepage
-    And User click product HTC One M9
+    And User click product HTC OneM9
     And User click button add to cart
     And User click button ok
     And User click menu cart
     And User click button place order
     And User click button purchase
     Then User able to see warning popup "Please fill out Name and Creditcard."
+
+
+    

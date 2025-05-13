@@ -1,6 +1,6 @@
 package com.finarizky.stepdef.web;
 
-import com.finarizky.BaseTest;
+import com.finarizky.base.BaseWebTest;
 import com.finarizky.page.web.HomepagePage;
 import com.finarizky.page.web.LoginPage;
 import io.cucumber.java.en.And;
@@ -8,13 +8,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-
+import java.util.Properties;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginStepdef extends BaseTest {
+public class LoginStepdef extends BaseWebTest {
 
     LoginPage loginpage;
-    private WebDriver driver;
+    WebDriver driver = BaseWebTest.driver;
+    Properties prop;
     HomepagePage homepagepage;
 
     String loggedInUsername;
@@ -22,8 +23,7 @@ public class LoginStepdef extends BaseTest {
     @Given("User is on landing page")
     public void userIsOnLandingPage() {
         driver = getDriver();
-        loginpage = new LoginPage(driver);
-        loginpage.goToLandingPage();
+        loginpage = new LoginPage(driver, prop);
     }
 
     @When("User click header menu login")
@@ -72,7 +72,7 @@ public class LoginStepdef extends BaseTest {
     @Then("User is success login")
     public void userIsSuccessLogin() {
 
-        homepagepage = new HomepagePage(driver);
+        homepagepage = new HomepagePage(driver, prop);
 
         String actualMessage = homepagepage.validateOnHomepage();
         String expectedMessage = "Welcome " + loggedInUsername;
