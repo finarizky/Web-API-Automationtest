@@ -1,12 +1,10 @@
 package com.finarizky.page.web;
 
+import com.finarizky.base.BaseWebTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,16 +17,14 @@ public class LoginPage {
     By closeButton = By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[1]");
     By landingPage = By.id("nava");
 
-    private final WebDriver driver;
+    WebDriver driver;
+    Properties prop;
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver, Properties prop) {
 
         this.driver = driver;
-    }
+        this.prop = prop;
 
-    public void goToLandingPage() {
-
-        driver.get("https://www.demoblaze.com/");
     }
 
     public void headerMenuLogin() {
@@ -49,13 +45,6 @@ public class LoginPage {
     public void clickButtonLogin() {
 
         driver.findElement(loginButton).click();
-    }
-
-    public String validateSuccessLogin(){
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement userElement = wait.until(ExpectedConditions.visibilityOfElementLocated(HomepagePage.verifUserLogin));
-        return userElement.getText().trim();
     }
 
     public void userDoesntExist(String doesntExist){

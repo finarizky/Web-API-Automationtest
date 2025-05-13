@@ -11,13 +11,13 @@ Feature: Get
   @Get-spesific-data
   Scenario: User get spesific data
     Given The user API is available
-    When User request get spesific data
-    Then The id should be ""
+    When User request get spesific data "60d0fe4f5311236168a109cd"
+    Then The id should be "60d0fe4f5311236168a109cd"
     And The response status should be 200
 
   @Get-wrong-id
   Scenario: User get wrong id
     Given The user API is available
-    When User request get spesific wrong data
-    Then User able to see error message ""
-    And The response status should be 404
+    When User request get spesific wrong data "1234567890"
+    Then User able to see error message "PARAMS_NOT_VALID"
+    And The response status should be 400

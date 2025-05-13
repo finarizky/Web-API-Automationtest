@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -22,11 +23,13 @@ public class HomepagePage {
     By thridProduct = By.cssSelector("a[href='prod.html?idp_=3']");
     By productDesc = By.xpath("//*[@id=\"more-information\"]/strong");
 
-    private WebDriver driver;
+    WebDriver driver;
+    Properties prop;
 
-    public HomepagePage(WebDriver driver) {
+    public HomepagePage(WebDriver driver, Properties prop) {
 
         this.driver = driver;
+        this.prop = prop;
     }
 
 

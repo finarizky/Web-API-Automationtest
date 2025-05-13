@@ -33,7 +33,13 @@ dependencies {
 }
 
 test {
-    useJUnit()
+    useJUnit() {
+
+        testLogging {
+            showStandardStreams = true
+            events "passed", "failed", "skipped"
+        }
+    }
 }
 
 configurations {

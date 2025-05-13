@@ -17,7 +17,7 @@ Feature: Login
     And User input username with "nanabi"
     And User input password with "xxx"
     And User click button login
-    Then User able to see warning popup "Wrong password."
+    Then User able to see popup "Wrong password."
 
   @login-unregistered-account
   Scenario: User login with unregistered account

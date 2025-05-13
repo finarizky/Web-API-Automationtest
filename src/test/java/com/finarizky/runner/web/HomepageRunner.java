@@ -1,4 +1,4 @@
-package com.finarizky;
+package com.finarizky.runner.web;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = {"com.finarizky"},
         features = {"src/test/resources/web-demoblaze/Homepage.feature"},
-        plugin = {"pretty","html:reports/cucumber_homepage.html", "json:reports/cucumber_homepage.json"}
+        plugin = {"pretty","html:reports/web/cucumber_homepage.html", "json:reports/web/cucumber_homepage.json"}
 )
 
 public class HomepageRunner {
