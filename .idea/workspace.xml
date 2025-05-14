@@ -5,45 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffab3443-c9e0-4db3-b6d5-f6bd6ad7be1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reports/web/cucumber_homepage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/web/cucumber_login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseAPITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/api/GetPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/api/PostPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/api/PutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/api/GetRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/api/PostRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/api/PutRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/CartRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/api/GetStepdef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/api/PostStepdef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/api/PutStepdef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/api-dummyapi/Put.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/jsonschema/getListUserSchema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/api/APIRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/WebRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/cucumber_homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/cucumber_homepage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/cucumber_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/cucumber_login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/HomepageRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/HomepageRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/LoginRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/LoginRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/RunnerWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/web/cucumber_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/web/cucumber_cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_cart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseWebTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/HomepagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/HomepagePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/CartStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/CartStepdef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/HomepageStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/HomepageStepdef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/LoginStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/LoginStepdef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/api-dummyapi/Get.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/api-dummyapi/Get.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/api-dummyapi/Post.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/api-dummyapi/Post.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Cart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Cart.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,37 +61,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.CartRunner (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CartRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HomepageRunner (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginRunnerTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CartRunner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GetRunner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LoginRunnerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PostRunner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PutRunner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunnerWebTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;fixing-login&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/GitHub/Web-API-Automationtest&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.CartRunner (1).executor": "Run",
+    "Gradle.CartRunner.executor": "Run",
+    "Gradle.HomepageRunner (1).executor": "Run",
+    "Gradle.LoginRunnerTest (1).executor": "Run",
+    "JUnit.CartRunner.executor": "Run",
+    "JUnit.GetRunner.executor": "Run",
+    "JUnit.LoginRunnerTest.executor": "Run",
+    "JUnit.PostRunner.executor": "Run",
+    "JUnit.PutRunner.executor": "Run",
+    "JUnit.RunnerWebTest.executor": "Run",
+    "JUnit.WebRunner.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "final1",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/macbook/Documents/GitHub/Web-API-Automationtest",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/reports/web" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginRunnerTest">
+  <component name="RunManager" selected="JUnit.WebRunner">
     <configuration name="CartRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Final_Project.test" />
       <extension name="coverage">
@@ -146,21 +118,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.finarizky.runner.web" />
       <option name="MAIN_CLASS_NAME" value="com.finarizky.runner.web.LoginRunnerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Final_Project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.finarizky.runner.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.finarizky.runner.api" />
-      <option name="MAIN_CLASS_NAME" value="com.finarizky.runner.api.PostRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,13 +153,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Final_Project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.finarizky.runner.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.finarizky.runner.web" />
+      <option name="MAIN_CLASS_NAME" value="com.finarizky.runner.web.WebRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginRunnerTest" />
+        <item itemvalue="JUnit.WebRunner" />
         <item itemvalue="JUnit.CartRunner" />
+        <item itemvalue="JUnit.LoginRunnerTest" />
         <item itemvalue="JUnit.RunnerWebTest" />
         <item itemvalue="JUnit.PutRunner" />
-        <item itemvalue="JUnit.PostRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -245,11 +217,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/LoginRunnerTest.java</url>
           <line>15</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/CartRunner.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/RunnerWebTest.java</url>
