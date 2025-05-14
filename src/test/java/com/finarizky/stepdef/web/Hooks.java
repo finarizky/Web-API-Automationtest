@@ -13,7 +13,7 @@ public class Hooks {
 
     @After
     public static void  quitDriver() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         BaseWebTest.quitDriver();
     }
 }

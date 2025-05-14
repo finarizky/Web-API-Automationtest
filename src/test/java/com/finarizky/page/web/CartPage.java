@@ -1,5 +1,6 @@
 package com.finarizky.page.web;
 
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +19,7 @@ public class CartPage {
     By btnDelete = By.cssSelector("#tbodyid > tr:nth-child(1) > td:nth-child(4) > a");
     By productDelete = By.cssSelector("#tbodyid > tr:nth-child(1)");
     By seventhProduct = By.xpath("//*[@id=\"tbodyid\"]/div[7]/div/div/h4/a");
-    By btnPlaceOrder = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
+    By btnPlaceOrder = By.xpath("//button[text()='Place Order']");
     By inputName = By.id("name");
     By inputCountry = By.id("country");
     By inputCity = By.id("city");
@@ -26,7 +27,7 @@ public class CartPage {
     By inputMonth = By.id("month");
     By inputYear = By.id("year");
     By btnClose = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
-    By btnPurchase = By.xpath("/html/body/div[6]/div/div[2]/button");
+    By btnPurchase = By.xpath("//button[text()='Purchase']");
     By txtTotal = By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/h2");
     By btnCart = By.xpath("//*[@id=\"navbarExample\"]/ul/li[4]/a");
 
@@ -53,10 +54,29 @@ public class CartPage {
 
     public void validdatePopUp(String validatePopUp){
 
-        assertFalse(driver.getPageSource().contains(validatePopUp));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+// Tunggu alert muncul
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        System.out.println("Alert text: " + alert.getText());
+// Ambil teks dari alert
+        String alertText = alert.getText();
+        System.out.println("Alert text: " + alertText);
+// Validasi teks alert sesuai harapan
+        Assert.assertEquals(alertText, validatePopUp);
+// Tutup alert (klik OK)
+        alert.accept();
+// validasi teks alertnya
+        Assert.assertTrue(alertText.contains(validatePopUp));
+    }
+
+    public void alertPopUp(String alertPopUp){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div.sweet-alert.showSweetAlert.visible")));
+
+        WebElement title = popup.findElement(By.tagName("h2"));
+        Assert.assertEquals("Thank you for your purchase!", title.getText());
     }
 
     public void setFifthProduct(){

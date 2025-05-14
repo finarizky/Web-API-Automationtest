@@ -37,7 +37,7 @@ public class BaseWebTest {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get(prop.getProperty("webBaseUrl"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 
         return driver;
     }

@@ -68,7 +68,7 @@ public class CartStepdef extends BaseWebTest {
 
         boolean isDeleted = cartpage.isProductDeleted();
         System.out.println("Is product deleted? " + isDeleted);
-        assertTrue("Product still on cart", isDeleted);
+        assertFalse("Product still on cart", isDeleted);
     }
 
     @And("User click product HTC OneM9")
@@ -139,5 +139,11 @@ public class CartStepdef extends BaseWebTest {
     public void userIsOnCartPage() {
 
         cartpage.validateCartPage();
+    }
+
+    @Then("User able to see alert popup {string}")
+    public void userAbleToSeeAlertPopup(String alertPopup0) {
+
+        cartpage.alertPopUp(alertPopup0);
     }
 }

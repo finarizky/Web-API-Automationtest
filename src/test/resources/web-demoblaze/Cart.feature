@@ -36,7 +36,7 @@ Feature: Cart
     And User input month with "08"
     And User input year with "2027"
     And User click button purchase
-    Then User able to see warning popup "Thank you for your purchase!"
+    Then User able to see alert popup "Thank you for your purchase!"
 
   @cancel-checkout
   Scenario: User cancel checkout
