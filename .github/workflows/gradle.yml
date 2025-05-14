@@ -1,5 +1,5 @@
 
-name: Selenium soucedemo workflow
+name: Web API workflow
 
 on:
   push:
