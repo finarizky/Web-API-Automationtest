@@ -50,7 +50,7 @@ configurations {
 
 def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
 
-task CucumberWeb() {
+tasks.register("CucumberWeb") {
     description("Running Web Test")
     dependsOn assemble, compileTestJava
     doLast {
@@ -58,7 +58,7 @@ task CucumberWeb() {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report.html',
+                    '--plugin', 'html:reports/web/webtest-report.html',
                     '--plugin', 'pretty',
                     '--glue', 'com.finarizky',
                     '--tags', "${tags}",
@@ -66,4 +66,28 @@ task CucumberWeb() {
             ]
         }
     }
+}
+
+tasks.register("CucumberApi") {
+    description("Running API Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/api/apitest-report.html',
+                    '--plugin', 'pretty',
+                    '--glue', 'com.finarizky',
+                    '--tags', "${tags}",
+                    'src/test/resources/api-dummyapi'
+            ]
+        }
+    }
+}
+
+tasks.register("CucumberAll") {
+    group = "verification"
+    description = "Run both Web and API Tests"
+    dependsOn "CucumberWeb", "CucumberApi"
 }

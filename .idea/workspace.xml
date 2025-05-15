@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffab3443-c9e0-4db3-b6d5-f6bd6ad7be1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/api/APIRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/WebRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/web/cucumber_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/web/cucumber_cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/web/cucumber_cart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/base/BaseWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/page/web/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/CartStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/CartStepdef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/finarizky/stepdef/web/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Cart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/web-demoblaze/Cart.feature" afterDir="false" />
-    </list>
+    <list default="true" id="ffab3443-c9e0-4db3-b6d5-f6bd6ad7be1b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +45,6 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2tDP8o9YefQ0FU315CvCLYahewU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -68,6 +56,8 @@
     "Gradle.CartRunner.executor": "Run",
     "Gradle.HomepageRunner (1).executor": "Run",
     "Gradle.LoginRunnerTest (1).executor": "Run",
+    "Gradle.Web-API-Automationtest [CucumberWebApi].executor": "Run",
+    "Gradle.Web-API-Automationtest [CucumberWeb].executor": "Run",
     "JUnit.CartRunner.executor": "Run",
     "JUnit.GetRunner.executor": "Run",
     "JUnit.LoginRunnerTest.executor": "Run",
@@ -81,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "final1",
+    "git-widget-placeholder": "fixing-automation-api2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/macbook/Documents/GitHub/Web-API-Automationtest",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
@@ -92,7 +82,51 @@
       <recent name="$PROJECT_DIR$/reports/web" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebRunner">
+  <component name="RunManager" selected="Gradle.Web-API-Automationtest [CucumberWeb]">
+    <configuration name="Web-API-Automationtest [CucumberWebApi]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="CucumberWebApi" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Web-API-Automationtest [CucumberWeb]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="CucumberWeb" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="CartRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Final_Project.test" />
       <extension name="coverage">
@@ -123,36 +157,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PutRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Final_Project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.finarizky.runner.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.finarizky.runner.api" />
-      <option name="MAIN_CLASS_NAME" value="com.finarizky.runner.api.PutRunner" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunnerWebTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Final_Project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.finarizky.runner.web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.finarizky.runner.web" />
-      <option name="MAIN_CLASS_NAME" value="com.finarizky.runner.web.RunnerWebTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WebRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Final_Project.test" />
       <extension name="coverage">
@@ -170,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Web-API-Automationtest [CucumberWeb]" />
+        <item itemvalue="Gradle.Web-API-Automationtest [CucumberWebApi]" />
         <item itemvalue="JUnit.WebRunner" />
         <item itemvalue="JUnit.CartRunner" />
         <item itemvalue="JUnit.LoginRunnerTest" />
-        <item itemvalue="JUnit.RunnerWebTest" />
-        <item itemvalue="JUnit.PutRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -222,6 +226,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/finarizky/runner/web/RunnerWebTest.java</url>
           <line>14</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/build.gradle</url>
+          <line>57</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
