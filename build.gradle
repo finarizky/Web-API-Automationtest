@@ -89,5 +89,5 @@ tasks.register("CucumberApi") {
 tasks.register("CucumberAll") {
     group = "verification"
     description = "Run both Web and API Tests"
-    dependsOn "CucumberWeb", "CucumberAPI"
+    dependsOn "CucumberWeb", "CucumberApi"
 }
