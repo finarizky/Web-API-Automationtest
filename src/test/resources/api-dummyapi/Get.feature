@@ -11,8 +11,8 @@ Feature: Get
   @Get-spesific-data
   Scenario: User get spesific data
     Given The user API is available
-    When User request get spesific data "60d0fe4f5311236168a109cd"
-    Then The id should be "60d0fe4f5311236168a109cd"
+    When User request get spesific data "60d0fe4f5311236168a109cf"
+    Then The id should be "60d0fe4f5311236168a109cf"
     And The response status should be 200
 
   @Get-wrong-id

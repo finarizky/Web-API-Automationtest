@@ -50,44 +50,18 @@ configurations {
 
 def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
 
-tasks.register("CucumberWeb") {
-    description("Running Web Test")
-    dependsOn assemble, compileTestJava
-    doLast {
-        javaexec {
-            main = "io.cucumber.core.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = [
-                    '--plugin', 'html:reports/web/webtest-report.html',
-                    '--plugin', 'pretty',
-                    '--glue', 'com.finarizky',
-                    '--tags', "${tags}",
-                    'src/test/resources/web-demoblaze'
-            ]
-        }
-    }
-}
-
-tasks.register("CucumberApi") {
-    description("Running API Test")
-    dependsOn assemble, compileTestJava
-    doLast {
-        javaexec {
-            main = "io.cucumber.core.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = [
-                    '--plugin', 'html:reports/api/apitest-report.html',
-                    '--plugin', 'pretty',
-                    '--glue', 'com.finarizky',
-                    '--tags', "${tags}",
-                    'src/test/resources/api-dummyapi'
-            ]
-        }
-    }
-}
-
-tasks.register("CucumberAll") {
+tasks.register("CucumberWebApi", JavaExec) {
     group = "verification"
-    description = "Run both Web and API Tests"
-    dependsOn "CucumberWeb", "CucumberApi"
+    description = "Running Web and API Test"
+
+    classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+    mainClass.set("io.cucumber.core.cli.Main")
+
+    args = [
+            '--plugin', 'html:reports/report.html',
+            '--plugin', 'pretty',
+            '--glue', 'com.finarizky',
+            '--tags', "${tags}",
+            'src/test/resources'
+]
 }
