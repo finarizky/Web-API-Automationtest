@@ -49,8 +49,8 @@ public class HomepageStepdef extends BaseWebTest {
     }
 
     @And("User click button slide")
-    public void userClickButtonSlide() {
-
+    public void userClickButtonSlide() throws InterruptedException {
+        Thread.sleep(5000);
         hompagepage.setBtnSlide();
     }
 
