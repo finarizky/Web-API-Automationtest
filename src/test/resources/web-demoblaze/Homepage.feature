@@ -1,7 +1,7 @@
 @homepage
 Feature: Homepage
 
-  @slide-image
+  @slide-image # Need to check
   Scenario: User see slide image 2
     Given User doing login with "nanabi" and "123"
     When User is on homepage
