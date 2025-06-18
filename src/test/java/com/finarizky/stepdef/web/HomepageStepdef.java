@@ -24,7 +24,7 @@ public class HomepageStepdef extends BaseWebTest {
     String loggedInUsername;
 
     @Given("User doing login with {string} and {string}")
-    public void userDoingLoginWithAnd(String username, String password) {
+    public void userDoingLoginWithAnd(String username, String password) throws InterruptedException {
 
         loginpage = new LoginPage(driver, prop);
         loginpage.headerMenuLogin();
@@ -32,6 +32,7 @@ public class HomepageStepdef extends BaseWebTest {
         loginpage.inputUsername(username);
         loginpage.inputPassword(password);
         loginpage.clickButtonLogin();
+        Thread.sleep(3000);
     }
 
     @When("User is on homepage")
@@ -48,8 +49,8 @@ public class HomepageStepdef extends BaseWebTest {
     }
 
     @And("User click button slide")
-    public void userClickButtonSlide() {
-
+    public void userClickButtonSlide() throws InterruptedException {
+        Thread.sleep(5000);
         hompagepage.setBtnSlide();
     }
 
